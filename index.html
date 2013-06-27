@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title>Difference Chart</title>
+	<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.area.above {
+  fill: rgb(252,141,89);
+}
+
+.area.below {
+  fill: rgb(145,207,96);
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+
+	button {
+  font: 14px Helvetica Neue;
+  background-color: #222;
+  
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,.25), rgba(255,255,255,.11));
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, rgba(255,255,255,.25)),color-stop(1, rgba(255,255,255,.11)));
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.11));
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 -1px 1px #222;
+  padding: 6px 10px 6px 10px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #222;
+  margin: 0;
+  -moz-box-shadow: 0 1px 3px #999;
+  -webkit-box-shadow: 0 1px 3px #999;
+  
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+  
+}
+	</style>
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheet.css">
+	<script type="text/javascript" src="d3.v3.min.js"></script>
+  </head>
+  <body>
+
+  <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+              <a id="forkme_banner" href="https://github.com/Sushanthece/D3-Difference-Chart">View on GitHub</a>
+              <h1 id="project_title">Difference Chart</h1> 
+              <a id="home" href="http://sushanthece.github.io/">Home</a>
+           </header>
+        </div>
+    
+  <!-- MAIN CONTENT -->
+        <div>
+          <section id="main_content" class="inner" >   
+			<div>
+			  <div style="width:20%;float:left;display:inline-block" >
+<textarea id="input_data" name="input_data" rows="22" cols="24">
+date,"New York","Paris"
+20120901,73,64
+20120902,77,63
+20120903,69,66
+20120904,89,56
+20120905,52,51
+20120906,89,52
+20120907,78,76
+20120908,51,76
+20120909,74,72
+20120910,89,63
+20120911,72,80
+20120912,73,68
+20120913,53,84
+20120914,57,81
+20120915,59,51
+20120916,55,55
+20120917,82,86
+20120918,51,58
+20120919,76,57
+20120920,76,70
+</textarea></br>
+			<button id="render" class="name">render</button>
+			</div>
+			<div id="marimekkomap" style="width:78%;float:right;display:inline-block"></div>
+			<script type="text/javascript" src="difference_chart.js"></script>
+		  </div>
+		</section>
+      </div>
+</body>
+</html>
